@@ -24,3 +24,43 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .print-transcript {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+  }
+
+  .print-transcript h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .print-transcript hr {
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 20px 0;
+  }
+
+  .print-transcript div {
+    margin: 0 0 14px;
+    break-inside: avoid;
+  }
+}
